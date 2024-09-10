@@ -8,6 +8,18 @@ const config = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+          postcssOptions: {
+            // Make sure this path is correct and points to your PostCSS config file
+            config: './postcss.config.js',
+          },
+        },
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-webpack5",
@@ -15,4 +27,5 @@ const config = {
   },
   staticDirs: ["../public"],
 };
+
 export default config;
