@@ -57,3 +57,12 @@ export const RedBTN: Story = {
     label: "Button"
   }
 };
+
+export const Blue: Story = {
+  args: {
+    primary: true,
+    label: "Button",
+    backgroundColor: "#2218e5",
+    size: "large"
+  }
+};
